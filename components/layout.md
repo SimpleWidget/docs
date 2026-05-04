@@ -4,9 +4,6 @@ Layout container component.
 
 ## Basic Usage
 
-::: tabs vue3 vue2 react
-@tab vue3
-
 ```vue
 <SLayout>
   <SLayout.Sider>Sider</SLayout.Sider>
@@ -18,36 +15,7 @@ Layout container component.
 </SLayout>
 ```
 
-@tab vue2
-
-```vue
-<SLayout>
-  <SLayout.Sider>Sider</SLayout.Sider>
-  <SLayout>
-    <SLayout.Header>Header</SLayout.Header>
-    <SLayout.Content>Content</SLayout.Content>
-    <SLayout.Footer>Footer</SLayout.Footer>
-  </SLayout>
-</SLayout>
-```
-
-@tab react
-
-```tsx
-<SLayout>
-  <SLayout.Sider>Sider</SLayout.Sider>
-  <SLayout>
-    <SLayout.Header>Header</SLayout.Header>
-    <SLayout.Content>Content</SLayout.Content>
-    <SLayout.Footer>Footer</SLayout.Footer>
-  </SLayout>
-</SLayout>
-```
-:::
-
-## Layout Props
-
-### Vue3 / Vue2 / React
+## Props
 
 | Name | Description | Type | Default |
 |------|-------------|------|---------|

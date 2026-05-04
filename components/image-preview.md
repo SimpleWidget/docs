@@ -4,47 +4,28 @@ Image preview component.
 
 ## Basic Usage
 
-::: tabs vue3 vue2 react
-@tab vue3
-
 ```vue
 <SImagePreview :src="imageSrc" v-model="visible" />
 ```
-
-@tab vue2
-
-```vue
-<SImagePreview :src="imageSrc" v-model="visible" />
-```
-
-@tab react
-
-```tsx
-<SImagePreview src={imageSrc} visible={visible} onClose={setVisible} />
-```
-:::
 
 ## Props
 
-### Vue3 / Vue2 / React
-
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
-| modelValue / v-model / visible | Visibility state | `boolean` | `false` |
+| modelValue / v-model | Visibility state | `boolean` | `false` |
 | src | Image URL | `string` | - |
 | zIndex | Z-index | `number` | `2000` |
 
 ## Events
-
-### Vue3 / Vue2
 
 | Name | Description |
 |------|-------------|
 | update:modelValue | Visibility change |
 | close | Triggered when closed |
 
-### React
+## React Props Difference
 
-| Name | Description |
-|------|-------------|
-| onClose | Triggered when closed |
+| Name | Description | Type | Default |
+|------|-------------|------|---------|
+| visible | Visibility state | `boolean` | `false` |
+| onClose | Close handler | `() => void` | - |
