@@ -1,0 +1,31 @@
+# ConfirmBox
+
+Confirmation dialog.
+
+## Basic Usage
+
+```vue
+<SConfirmBox
+  title="Confirm"
+  message="Are you sure?"
+  @confirm="handleConfirm"
+  @cancel="handleCancel"
+/>
+```
+
+## Props
+
+| Name | Description | Type | Default |
+|------|-------------|------|---------|
+| title | Dialog title | `string` | `'Confirm'` |
+| message | Dialog message | `string` | - |
+| confirmText | Confirm button text | `string` | `'Confirm'` |
+| cancelText | Cancel button text | `string` | `'Cancel'` |
+| type | Dialog type | `'warning' \| 'danger' \| 'info'` | `'warning'` |
+
+## Events
+
+| Name | Description |
+|------|-------------|
+| confirm | Triggered when confirmed |
+| cancel | Triggered when cancelled |

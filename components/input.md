@@ -1,51 +1,32 @@
 # Input
 
-Input is used to collect user input.
+Text input component.
 
 ## Basic Usage
 
 ```vue
-<SInput placeholder="Please input" />
-```
-
-## Disabled
-
-```vue
-<SInput disabled placeholder="Disabled" />
-```
-
-## Sizes
-
-```vue
-<SInput size="large" placeholder="Large size" />
-<SInput size="middle" placeholder="Middle size" />
-<SInput size="small" placeholder="Small size" />
-<SInput size="mini" placeholder="Mini size" />
-```
-
-## Password
-
-```vue
-<SInput type="password" placeholder="Password" showPassword />
-```
-
-## Search
-
-```vue
-<SInput search placeholder="Search" />
+<SInput v-model="value" placeholder="Please input" />
 ```
 
 ## Props
 
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
-| type | Input type | `'text' \| 'password' \| 'number'` | `'text'` |
-| modelValue | Binding value | `string \| number` | `''` |
-| placeholder | Placeholder | `string` | `''` |
+| modelValue | Input value | `string` | `''` |
+| type | Input type | `'text' \| 'password' \| 'number' \| 'email'` | `'text'` |
+| placeholder | Placeholder text | `string` | - |
 | disabled | Disabled state | `boolean` | `false` |
-| size | Input size | `'large' \| 'middle' \| 'small' \| 'mini'` | `'middle'` |
-| clear | Show clear button | `boolean` | `false` |
-| showPassword | Show password toggle | `boolean` | `false` |
-| search | Search mode | `boolean` | `false` |
-| maxLength | Max length | `number` | - |
-| width | Custom width | `string \| number` | - |
+| clearable | Show clear button | `boolean` | `false` |
+| size | Input size | `'large' \| 'middle' \| 'small'` | `'middle'` |
+| prefix | Prefix icon | `string` | - |
+| suffix | Suffix icon | `string` | - |
+
+## Events
+
+| Name | Description |
+|------|-------------|
+| input | Triggered on input |
+| change | Triggered on change |
+| focus | Triggered on focus |
+| blur | Triggered on blur |
+| clear | Triggered when cleared |
