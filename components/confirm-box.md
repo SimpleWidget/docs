@@ -4,6 +4,8 @@ Confirmation dialog.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <SConfirmBox
   title="Confirm"
@@ -13,13 +15,33 @@ Confirmation dialog.
 />
 ```
 
-## Types
+:::
+
+::: details Vue2
 
 ```vue
-<SConfirmBox type="warning" message="Warning message" />
-<SConfirmBox type="danger" message="Danger action" />
-<SConfirmBox type="info" message="Info message" />
+<SConfirmBox
+  title="Confirm"
+  message="Are you sure?"
+  @confirm="handleConfirm"
+  @cancel="handleCancel"
+/>
 ```
+
+:::
+
+::: details React
+
+```tsx
+<SConfirmBox
+  title="Confirm"
+  message="Are you sure?"
+  onConfirm={handleConfirm}
+  onCancel={handleCancel}
+/>
+```
+
+:::
 
 ## Props
 
@@ -27,20 +49,11 @@ Confirmation dialog.
 |------|-------------|------|---------|
 | title | Dialog title | `string` | `'Confirm'` |
 | message | Dialog message | `string` | - |
-| confirmText | Confirm button text | `string` | `'Confirm'` |
-| cancelText | Cancel button text | `string` | `'Cancel'` |
 | type | Dialog type | `'warning' \| 'danger' \| 'info'` | `'warning'` |
 
 ## Events
 
-| Name | Description |
-|------|-------------|
-| confirm | Triggered when confirmed |
-| cancel | Triggered when cancelled |
-
-## React Props Difference
-
-| Name | Description | Type | Default |
-|------|-------------|------|---------|
-| onConfirm | Confirm handler | `() => void` | - |
-| onCancel | Cancel handler | `() => void` | - |
+| Name | Description | Vue3 | Vue2 | React |
+|------|-------------|------|------|-------|
+| confirm | Confirm event | `@confirm` | `@confirm` | `onConfirm` |
+| cancel | Cancel event | `@cancel` | `@cancel` | `onCancel` |

@@ -4,11 +4,35 @@ Infinite scroll component.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <SInfiniteScrolling @load="loadMore">
   <div v-for="item in list">{{ item }}</div>
 </SInfiniteScrolling>
 ```
+
+:::
+
+::: details Vue2
+
+```vue
+<SInfiniteScrolling @load="loadMore">
+  <div v-for="item in list">{{ item }}</div>
+</SInfiniteScrolling>
+```
+
+:::
+
+::: details React
+
+```tsx
+<SInfiniteScrolling onLoad={loadMore}>
+  {list.map(item => <div key={item}>{item}</div>)}
+</SInfiniteScrolling>
+```
+
+:::
 
 ## Props
 
@@ -16,16 +40,9 @@ Infinite scroll component.
 |------|-------------|------|---------|
 | distance | Load distance (px) | `number` | `100` |
 | disabled | Disabled state | `boolean` | `false` |
-| immediate | Immediate check | `boolean` | `true` |
 
 ## Events
 
-| Name | Description |
-|------|-------------|
-| load | Triggered when scroll to bottom |
-
-## React Props Difference
-
-| Name | Description | Type | Default |
-|------|-------------|------|---------|
-| onLoad | Load handler | `() => void` | - |
+| Name | Description | Vue3 | Vue2 | React |
+|------|-------------|------|------|-------|
+| load | Load more | `@load` | `@load` | `onLoad` |

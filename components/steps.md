@@ -4,6 +4,8 @@ Step progress indicator.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <SSteps :current="1">
   <SStepsItem title="Step 1" description="Description" />
@@ -12,15 +14,31 @@ Step progress indicator.
 </SSteps>
 ```
 
-## Vertical
+:::
+
+::: details Vue2
 
 ```vue
-<SSteps direction="vertical" :current="1">
+<SSteps :current="1">
   <SStepsItem title="Step 1" description="Description" />
   <SStepsItem title="Step 2" description="Description" />
   <SStepsItem title="Step 3" description="Description" />
 </SSteps>
 ```
+
+:::
+
+::: details React
+
+```tsx
+<SSteps current={1}>
+  <SStepsItem title="Step 1" description="Description" />
+  <SStepsItem title="Step 2" description="Description" />
+  <SStepsItem title="Step 3" description="Description" />
+</SSteps>
+```
+
+:::
 
 ## Props
 
@@ -29,11 +47,3 @@ Step progress indicator.
 | current | Current step | `number` | `0` |
 | direction | Step direction | `'horizontal' \| 'vertical'` | `'horizontal'` |
 | size | Steps size | `'large' \| 'middle' \| 'small'` | `'middle'` |
-
-### StepsItem Props
-
-| Name | Description | Type | Default |
-|------|-------------|------|---------|
-| title | Step title | `string` | - |
-| description | Step description | `string` | - |
-| icon | Step icon | `string` | - |

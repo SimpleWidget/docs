@@ -4,15 +4,29 @@ Watermark overlay component.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <SWatermark content="Watermark text" />
 ```
 
-## Custom Styling
+:::
+
+::: details Vue2
 
 ```vue
-<SWatermark content="Watermark" :opacity="0.3" :rotate="-30" color="#1890ff" />
+<SWatermark content="Watermark text" />
 ```
+
+:::
+
+::: details React
+
+```tsx
+<SWatermark content="Watermark text" />
+```
+
+:::
 
 ## Props
 
@@ -24,6 +38,3 @@ Watermark overlay component.
 | opacity | Watermark opacity | `number` | `0.2` |
 | color | Watermark color | `string` | `'#000'` |
 | rotate | Rotation angle | `number` | `-45` |
-| fontSize | Font size | `number` | `16` |
-| fontFamily | Font family | `string` | `'sans-serif'` |
-| zIndex | Z-index | `number` | `1000` |

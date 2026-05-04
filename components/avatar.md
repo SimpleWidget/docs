@@ -4,18 +4,32 @@ Display user avatar or fallback.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <SAvatar src="https://example.com/avatar.jpg" />
 <SAvatar name="John Doe" />
 ```
 
-## Sizes
+:::
+
+::: details Vue2
 
 ```vue
-<SAvatar name="Large" size="large" />
-<SAvatar name="Middle" size="middle" />
-<SAvatar name="Small" size="small" />
+<SAvatar src="https://example.com/avatar.jpg" />
+<SAvatar name="John Doe" />
 ```
+
+:::
+
+::: details React
+
+```tsx
+<SAvatar src="https://example.com/avatar.jpg" />
+<SAvatar name="John Doe" />
+```
+
+:::
 
 ## Props
 
@@ -28,6 +42,6 @@ Display user avatar or fallback.
 
 ## Events
 
-| Name | Description |
-|------|-------------|
-| error | Triggered when image fails to load |
+| Name | Description | Vue3 | Vue2 | React |
+|------|-------------|------|------|-------|
+| error | Image error | `@error` | `@error` | `onError` |

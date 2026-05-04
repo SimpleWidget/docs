@@ -4,21 +4,63 @@ Global message notification.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <SMessage type="success" message="Success!" />
-<SMessage type="error" message="Error occurred" />
-<SMessage type="warning" message="Warning!" />
-<SMessage type="info" message="Info message" />
+<SMessage type="error" message="Error!" />
 ```
 
-## Function Calls
+:::
+
+::: details Vue2
+
+```vue
+<SMessage type="success" message="Success!" />
+<SMessage type="error" message="Error!" />
+```
+
+:::
+
+::: details React
+
+```tsx
+<SMessage type="success" message="Success!" />
+<SMessage type="error" message="Error!" />
+```
+
+:::
+
+## Function Call
+
+::: details Vue3
 
 ```ts
 SMessage.success('Operation successful')
-SMessage.warning('Warning message')
 SMessage.error('Error occurred')
-SMessage.info('Info message')
 ```
+
+:::
+
+::: details Vue2
+
+```ts
+SMessage.success('Operation successful')
+SMessage.error('Error occurred')
+```
+
+:::
+
+::: details React
+
+```tsx
+import { SMessage } from 'simplewidget-react'
+
+SMessage.success('Operation successful')
+SMessage.error('Error occurred')
+```
+
+:::
 
 ## Props
 
@@ -27,4 +69,3 @@ SMessage.info('Info message')
 | type | Message type | `'success' \| 'warning' \| 'error' \| 'info'` | `'info'` |
 | message | Message content | `string` | - |
 | duration | Display duration (ms) | `number` | `3000` |
-| closable | Show close button | `boolean` | `false` |

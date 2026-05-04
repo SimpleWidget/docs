@@ -4,28 +4,40 @@ Display calendar for date selection.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <SCalendar v-model="date" />
 ```
+
+:::
+
+::: details Vue2
+
+```vue
+<SCalendar v-model="date" />
+```
+
+:::
+
+::: details React
+
+```tsx
+<SCalendar value={date} onChange={setDate} />
+```
+
+:::
 
 ## Props
 
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
-| modelValue / v-model | Selected date | `Date` | - |
+| modelValue / v-model / value | Selected date | `Date` | - |
 | minDate | Minimum date | `Date` | - |
 | maxDate | Maximum date | `Date` | - |
-| showToday | Show today button | `boolean` | `true` |
 
 ## Events
 
-| Name | Description |
-|------|-------------|
-| change | Triggered when date changes |
-
-## React Props Difference
-
-| Name | Description | Type | Default |
-|------|-------------|------|---------|
-| value | Selected date | `Date` | - |
-| onChange | Change handler | `(date: Date) => void` | - |
+| Name | Description | Vue3 | Vue2 | React |
+|------|-------------|------|------|-------|
+| change | Date change | `@change` | `@change` | `onChange` |

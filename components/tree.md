@@ -4,6 +4,8 @@ Tree structure component.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <STree
   :data="treeData"
@@ -13,16 +15,33 @@ Tree structure component.
 />
 ```
 
-## With TreeNode
+:::
+
+::: details Vue2
 
 ```vue
-<STree :data="treeData">
-  <STreeNode label="Parent">
-    <STreeNode label="Child 1" />
-    <STreeNode label="Child 2" />
-  </STreeNode>
-</STree>
+<STree
+  :data="treeData"
+  :expandedKeys="expandedKeys"
+  @select="handleSelect"
+  @toggle="handleToggle"
+/>
 ```
+
+:::
+
+::: details React
+
+```tsx
+<STree
+  data={treeData}
+  expandedKeys={expandedKeys}
+  onSelect={handleSelect}
+  onToggle={handleToggle}
+/>
+```
+
+:::
 
 ## Props
 
@@ -30,28 +49,11 @@ Tree structure component.
 |------|-------------|------|---------|
 | data | Tree data | `object[]` | `[]` |
 | expandedKeys | Expanded keys | `string[]` | `[]` |
-| selectedKeys | Selected keys | `string[]` | `[]` |
 | checkable | Show checkboxes | `boolean` | `false` |
-| defaultExpandAll | Expand all by default | `boolean` | `false` |
-
-## TreeNode Props
-
-| Name | Description | Type | Default |
-|------|-------------|------|---------|
-| label | Node label | `string` | - |
-| children | Child nodes | `object[]` | - |
-| disabled | Disabled state | `boolean` | `false` |
 
 ## Events
 
-| Name | Description |
-|------|-------------|
-| select | Triggered when node selected |
-| toggle | Triggered when node expanded/collapsed |
-
-## React Props Difference
-
-| Name | Description | Type | Default |
-|------|-------------|------|---------|
-| onSelect | Selection handler | `(keys: string[]) => void` | - |
-| onToggle | Toggle handler | `(key: string, expanded: boolean) => void` | - |
+| Name | Description | Vue3 | Vue2 | React |
+|------|-------------|------|------|-------|
+| select | Node selection | `@select` | `@select` | `onSelect` |
+| toggle | Expand/collapse | `@toggle` | `@toggle` | `onToggle` |

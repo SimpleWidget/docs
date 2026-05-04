@@ -4,39 +4,42 @@ Multi-line text input.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <STextarea v-model="value" placeholder="Please input" />
 ```
 
-## Rows
+:::
+
+::: details Vue2
 
 ```vue
-<STextarea v-model="value" :rows="6" />
+<STextarea v-model="value" placeholder="Please input" />
 ```
+
+:::
+
+::: details React
+
+```tsx
+<STextarea value={value} onChange={setValue} placeholder="Please input" />
+```
+
+:::
 
 ## Props
 
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
-| modelValue / v-model | Text value | `string` | `''` |
+| modelValue / v-model / value | Text value | `string` | `''` |
 | placeholder | Placeholder text | `string` | - |
 | disabled | Disabled state | `boolean` | `false` |
 | rows | Number of rows | `number` | `4` |
 | maxlength | Maximum length | `number` | - |
-| showCount | Show character count | `boolean` | `false` |
-| autosize | Auto height | `boolean` | `false` |
 
 ## Events
 
-| Name | Description |
-|------|-------------|
-| change | Triggered when value changes |
-| focus | Triggered on focus |
-| blur | Triggered on blur |
-
-## React Props Difference
-
-| Name | Description | Type | Default |
-|------|-------------|------|---------|
-| value | Text value | `string` | `''` |
-| onChange | Change handler | `(value: string) => void` | - |
+| Name | Description | Vue3 | Vue2 | React |
+|------|-------------|------|------|-------|
+| change | Value change | `@change` | `@change` | `onChange` |

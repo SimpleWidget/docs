@@ -4,29 +4,55 @@ Text input component.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <SInput v-model="value" placeholder="Please input" />
 ```
 
+:::
+
+::: details Vue2
+
+```vue
+<SInput v-model="value" placeholder="Please input" />
+```
+
+:::
+
+::: details React
+
+```tsx
+<SInput value={value} onChange={(e) => setValue(e.target.value)} placeholder="Please input" />
+```
+
+:::
+
 ## Disabled
+
+::: details Vue3
 
 ```vue
 <SInput disabled placeholder="Disabled" />
 ```
 
-## Sizes
+:::
+
+::: details Vue2
 
 ```vue
-<SInput size="large" placeholder="Large size" />
-<SInput size="middle" placeholder="Middle size" />
-<SInput size="small" placeholder="Small size" />
+<SInput disabled placeholder="Disabled" />
 ```
 
-## Password
+:::
 
-```vue
-<SInput type="password" placeholder="Password" showPassword />
+::: details React
+
+```tsx
+<SInput disabled placeholder="Disabled" />
 ```
+
+:::
 
 ## Props
 
@@ -41,17 +67,8 @@ Text input component.
 
 ## Events
 
-| Name | Description |
-|------|-------------|
-| update:modelValue | Triggered on input |
-| change | Triggered on change |
-| focus | Triggered on focus |
-| blur | Triggered on blur |
-| clear | Triggered when cleared |
-
-## React Props Difference
-
-| Name | Description | Type | Default |
-|------|-------------|------|---------|
-| value | Input value | `string` | `''` |
-| onChange | Change handler | `(value: string) => void` | - |
+| Name | Description | Vue3 | Vue2 | React |
+|------|-------------|------|------|-------|
+| input | Input event | `@input` | `@input` | `onChange` |
+| focus | Focus event | `@focus` | `@focus` | `onFocus` |
+| blur | Blur event | `@blur` | `@blur` | `onBlur` |

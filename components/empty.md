@@ -4,15 +4,29 @@ Empty state display.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <SEmpty description="No data" />
 ```
 
-## Custom Image
+:::
+
+::: details Vue2
 
 ```vue
-<SEmpty image="/empty.png" description="Nothing here" />
+<SEmpty description="No data" />
 ```
+
+:::
+
+::: details React
+
+```tsx
+<SEmpty description="No data" />
+```
+
+:::
 
 ## Props
 
@@ -20,4 +34,3 @@ Empty state display.
 |------|-------------|------|---------|
 | image | Custom image URL | `string` | - |
 | description | Description text | `string` | `'No data'` |
-| imageSize | Image size | `number` | - |

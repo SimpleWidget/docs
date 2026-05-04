@@ -4,17 +4,32 @@ Progress indicator component.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <SProgress :percentage="50" />
 <SProgress :percentage="80" type="circle" />
 ```
 
-## With Color
+:::
+
+::: details Vue2
 
 ```vue
-<SProgress :percentage="70" color="#67c23a" />
-<SProgress :percentage="50" type="circle" color="#e6a23c" />
+<SProgress :percentage="50" />
+<SProgress :percentage="80" type="circle" />
 ```
+
+:::
+
+::: details React
+
+```tsx
+<SProgress percentage={50} />
+<SProgress percentage={80} type="circle" />
+```
+
+:::
 
 ## Props
 
@@ -24,5 +39,3 @@ Progress indicator component.
 | type | Progress type | `'line' \| 'circle' \| 'dashboard'` | `'line'` |
 | strokeWidth | Stroke width | `number` | `6` |
 | color | Progress color | `string` | - |
-| trackColor | Track color | `string` | - |
-| showText | Show percentage text | `boolean` | `true` |

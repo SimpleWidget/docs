@@ -4,38 +4,49 @@ Radio button component.
 
 ## Basic Usage
 
-```vue
-<SRadio v-model="value" label="1">Option 1</SRadio>
-<SRadio v-model="value" label="2">Option 2</SRadio>
-```
-
-## Group
+::: details Vue3
 
 ```vue
 <SRadioGroup v-model="value">
   <SRadio label="Option A" value="a" />
   <SRadio label="Option B" value="b" />
-  <SRadio label="Option C" value="c" />
 </SRadioGroup>
 ```
+
+:::
+
+::: details Vue2
+
+```vue
+<SRadioGroup v-model="value">
+  <SRadio label="Option A" value="a" />
+  <SRadio label="Option B" value="b" />
+</SRadioGroup>
+```
+
+:::
+
+::: details React
+
+```tsx
+<SRadioGroup value={value} onChange={setValue}>
+  <SRadio label="Option A" value="a" />
+  <SRadio label="Option B" value="b" />
+</SRadioGroup>
+```
+
+:::
 
 ## Props
 
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
-| modelValue / v-model | Selected value | `string \| number` | - |
+| modelValue / v-model / value | Selected value | `string \| number` | - |
 | label | Radio label | `string \| number` | - |
 | disabled | Disabled state | `boolean` | `false` |
 
 ## Events
 
-| Name | Description |
-|------|-------------|
-| change | Triggered when selection changes |
-
-## React Props Difference
-
-| Name | Description | Type | Default |
-|------|-------------|------|---------|
-| checked | Selected state | `boolean` | `false` |
-| onChange | Change handler | `(value: string \| number) => void` | - |
+| Name | Description | Vue3 | Vue2 | React |
+|------|-------------|------|------|-------|
+| change | Selection change | `@change` | `@change` | `onChange` |

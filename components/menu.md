@@ -4,6 +4,8 @@ Navigation menu component.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <SMenu :defaultActive="active" @select="handleSelect">
   <SMenuItem index="1">Menu Item 1</SMenuItem>
@@ -11,14 +13,29 @@ Navigation menu component.
 </SMenu>
 ```
 
-## Horizontal Mode
+:::
+
+::: details Vue2
 
 ```vue
-<SMenu mode="horizontal">
-  <SMenuItem index="1">Item 1</SMenuItem>
-  <SMenuItem index="2">Item 2</SMenuItem>
+<SMenu :defaultActive="active" @select="handleSelect">
+  <SMenuItem index="1">Menu Item 1</SMenuItem>
+  <SMenuItem index="2">Menu Item 2</SMenuItem>
 </SMenu>
 ```
+
+:::
+
+::: details React
+
+```tsx
+<SMenu defaultActive={active} onSelect={handleSelect}>
+  <SMenuItem index="1">Menu Item 1</SMenuItem>
+  <SMenuItem index="2">Menu Item 2</SMenuItem>
+</SMenu>
+```
+
+:::
 
 ## Props
 
@@ -26,17 +43,9 @@ Navigation menu component.
 |------|-------------|------|---------|
 | defaultActive | Default active index | `string` | - |
 | mode | Menu mode | `'horizontal' \| 'vertical'` | `'vertical'` |
-| collapse | Collapsed state | `boolean` | `false` |
-
-### MenuItem Props
-
-| Name | Description | Type | Default |
-|------|-------------|------|---------|
-| index | Menu item index | `string` | - |
-| disabled | Disabled state | `boolean` | `false` |
 
 ## Events
 
-| Name | Description |
-|------|-------------|
-| select | Triggered when item selected |
+| Name | Description | Vue3 | Vue2 | React |
+|------|-------------|------|------|-------|
+| select | Item selection | `@select` | `@select` | `onSelect` |

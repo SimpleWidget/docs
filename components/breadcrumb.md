@@ -4,6 +4,8 @@ Display navigation path.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <SBreadcrumb>
   <SBreadcrumbItem to="/">Home</SBreadcrumbItem>
@@ -12,14 +14,31 @@ Display navigation path.
 </SBreadcrumb>
 ```
 
-## Custom Separator
+:::
+
+::: details Vue2
 
 ```vue
-<SBreadcrumb separator=">">
+<SBreadcrumb>
   <SBreadcrumbItem to="/">Home</SBreadcrumbItem>
-  <SBreadcrumbItem>Current</SBreadcrumbItem>
+  <SBreadcrumbItem to="/components">Components</SBreadcrumbItem>
+  <SBreadcrumbItem>Breadcrumb</SBreadcrumbItem>
 </SBreadcrumb>
 ```
+
+:::
+
+::: details React
+
+```tsx
+<SBreadcrumb>
+  <SBreadcrumbItem to="/">Home</SBreadcrumbItem>
+  <SBreadcrumbItem to="/components">Components</SBreadcrumbItem>
+  <SBreadcrumbItem>Breadcrumb</SBreadcrumbItem>
+</SBreadcrumb>
+```
+
+:::
 
 ## Props
 
@@ -32,4 +51,3 @@ Display navigation path.
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
 | to | Link target | `string` | - |
-| replace | Replace history | `boolean` | `false` |

@@ -4,16 +4,32 @@ Icon component.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <SIcon name="edit" />
 <SIcon name="delete" size="20" color="#333" />
 ```
 
-## Spin
+:::
+
+::: details Vue2
 
 ```vue
-<SIcon name="loading" spin />
+<SIcon name="edit" />
+<SIcon name="delete" size="20" color="#333" />
 ```
+
+:::
+
+::: details React
+
+```tsx
+<SIcon name="edit" />
+<SIcon name="delete" size={20} color="#333" />
+```
+
+:::
 
 ## Props
 

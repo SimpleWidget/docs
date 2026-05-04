@@ -4,6 +4,8 @@ Data table component.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <STable
   :data="tableData"
@@ -13,17 +15,59 @@ Data table component.
 />
 ```
 
+:::
+
+::: details Vue2
+
+```vue
+<STable
+  :data="tableData"
+  :columns="columns"
+  @select="handleSelect"
+  @rowClick="handleRowClick"
+/>
+```
+
+:::
+
+::: details React
+
+```tsx
+<STable
+  data={tableData}
+  columns={columns}
+  onSelect={handleSelect}
+  onRowClick={handleRowClick}
+/>
+```
+
+:::
+
 ## With Selection
 
-```vue
-<STable :data="tableData" :columns="columns" select @select="handleSelect" />
-```
-
-## With Row Numbers
+::: details Vue3
 
 ```vue
-<STable :data="tableData" :columns="columns" num />
+<STable :data="tableData" :columns="columns" select />
 ```
+
+:::
+
+::: details Vue2
+
+```vue
+<STable :data="tableData" :columns="columns" select />
+```
+
+:::
+
+::: details React
+
+```tsx
+<STable data={tableData} columns={columns} select />
+```
+
+:::
 
 ## Props
 
@@ -34,11 +78,8 @@ Data table component.
 | align | Table alignment | `'left' \| 'center' \| 'right'` | `'left'` |
 | border | Show border | `boolean` | `false` |
 | stripe | Show stripe | `boolean` | `false` |
-| hover | Show hover effect | `boolean` | `true` |
 | select | Enable selection | `boolean` | `false` |
 | num | Show row number | `boolean` | `false` |
-| height | Fixed height | `string` | - |
-| maxHeight | Maximum height | `string` | - |
 
 ## Column Props
 
@@ -47,18 +88,10 @@ Data table component.
 | prop | Data property | `string` | - |
 | label | Column label | `string` | - |
 | width | Column width | `string` | - |
-| fixed | Fixed column | `'left' \| 'right'` | - |
 
 ## Events
 
-| Name | Description |
-|------|-------------|
-| select | Triggered when row selected |
-| rowClick | Triggered when row clicked |
-
-## React Props Difference
-
-| Name | Description | Type | Default |
-|------|-------------|------|---------|
-| onSelect | Selection handler | `(rows: object[]) => void` | - |
-| onRowClick | Row click handler | `(row: object) => void` | - |
+| Name | Description | Vue3 | Vue2 | React |
+|------|-------------|------|------|-------|
+| select | Row selection | `@select` | `@select` | `onSelect` |
+| rowClick | Row click | `@rowClick` | `@rowClick` | `onRowClick` |

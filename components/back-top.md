@@ -4,17 +4,29 @@ Scroll back to top of page.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <SBackTop />
 ```
 
-## Custom Content
+:::
+
+::: details Vue2
 
 ```vue
-<SBackTop>
-  <div>Top</div>
-</SBackTop>
+<SBackTop />
 ```
+
+:::
+
+::: details React
+
+```tsx
+<SBackTop />
+```
+
+:::
 
 ## Props
 

@@ -4,17 +4,29 @@ Image display component.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <SImage src="https://example.com/image.jpg" />
 ```
 
-## Fit Modes
+:::
+
+::: details Vue2
 
 ```vue
-<SImage src="https://example.com/image.jpg" fit="contain" />
-<SImage src="https://example.com/image.jpg" fit="cover" />
-<SImage src="https://example.com/image.jpg" fit="fill" />
+<SImage src="https://example.com/image.jpg" />
 ```
+
+:::
+
+::: details React
+
+```tsx
+<SImage src="https://example.com/image.jpg" />
+```
+
+:::
 
 ## Props
 
@@ -23,13 +35,11 @@ Image display component.
 | src | Image URL | `string` | - |
 | alt | Alt text | `string` | - |
 | fit | Object-fit mode | `'fill' \| 'contain' \| 'cover' \| 'none'` | `'cover'` |
-| width | Image width | `string` | - |
-| height | Image height | `string` | - |
 | lazy | Lazy load | `boolean` | `false` |
 
 ## Events
 
-| Name | Description |
-|------|-------------|
-| load | Triggered when image loads |
-| error | Triggered when image fails |
+| Name | Description | Vue3 | Vue2 | React |
+|------|-------------|------|------|-------|
+| load | Image loaded | `@load` | `@load` | `onLoad` |
+| error | Load error | `@error` | `@error` | `onError` |

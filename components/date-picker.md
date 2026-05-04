@@ -4,21 +4,35 @@ Date selection component.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <SDatePicker v-model="date" />
 ```
 
-## Placeholder
+:::
+
+::: details Vue2
 
 ```vue
-<SDatePicker v-model="date" placeholder="Select date" />
+<SDatePicker v-model="date" />
 ```
+
+:::
+
+::: details React
+
+```tsx
+<SDatePicker value={date} onChange={setDate} />
+```
+
+:::
 
 ## Props
 
 | Name | Description | Type | Default |
 |------|-------------|------|---------|
-| modelValue / v-model | Selected date | `Date` | - |
+| modelValue / v-model / value | Selected date | `Date` | - |
 | placeholder | Placeholder text | `string` | `'Select date'` |
 | disabled | Disabled state | `boolean` | `false` |
 | clearable | Show clear button | `boolean` | `true` |
@@ -26,14 +40,6 @@ Date selection component.
 
 ## Events
 
-| Name | Description |
-|------|-------------|
-| change | Triggered when date changes |
-| clear | Triggered when cleared |
-
-## React Props Difference
-
-| Name | Description | Type | Default |
-|------|-------------|------|---------|
-| value | Selected date | `Date` | - |
-| onChange | Change handler | `(date: Date) => void` | - |
+| Name | Description | Vue3 | Vue2 | React |
+|------|-------------|------|------|-------|
+| change | Date change | `@change` | `@change` | `onChange` |

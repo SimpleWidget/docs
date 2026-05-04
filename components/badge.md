@@ -4,30 +4,41 @@ Badge is used to display status or count.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <SBadge value="5">
-  <div style="width: 40px; height: 40px; background: #f0f0f0;"></div>
+  <div class="box">Content</div>
 </SBadge>
 <SBadge value="99" />
 <SBadge value="100" :max="99" />
 ```
 
-## Types
+:::
+
+::: details Vue2
 
 ```vue
-<SBadge value="5" type="primary" />
-<SBadge value="5" type="success" />
-<SBadge value="5" type="danger" />
-<SBadge value="5" type="warning" />
-<SBadge value="5" type="info" />
+<SBadge value="5">
+  <div class="box">Content</div>
+</SBadge>
+<SBadge value="99" />
+<SBadge :value="100" :max="99" />
 ```
 
-## Dot Mode
+:::
 
-```vue
-<SBadge dot type="primary" />
-<SBadge dot type="success" />
+::: details React
+
+```tsx
+<SBadge value="5">
+  <div className="box">Content</div>
+</SBadge>
+<SBadge value="99" />
+<SBadge value={100} max={99} />
 ```
+
+:::
 
 ## Props
 

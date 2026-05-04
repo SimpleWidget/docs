@@ -4,28 +4,64 @@ Select component for choosing from options.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <SSelect v-model="value" placeholder="Please select">
   <SOption label="Option 1" value="1" />
   <SOption label="Option 2" value="2" />
-  <SOption label="Option 3" value="3" />
 </SSelect>
 ```
 
+:::
+
+::: details Vue2
+
+```vue
+<SSelect v-model="value" placeholder="Please select">
+  <SOption label="Option 1" value="1" />
+  <SOption label="Option 2" value="2" />
+</SSelect>
+```
+
+:::
+
+::: details React
+
+```tsx
+<SSelect value={value} onChange={setValue} placeholder="Please select">
+  <SOption label="Option 1" value="1" />
+  <SOption label="Option 2" value="2" />
+</SSelect>
+```
+
+:::
+
 ## Disabled
+
+::: details Vue3
 
 ```vue
 <SSelect disabled v-model="value" placeholder="Disabled" />
 ```
 
-## Clearable
+:::
+
+::: details Vue2
 
 ```vue
-<SSelect clearable v-model="value" placeholder="Clearable">
-  <SOption label="Option 1" value="1" />
-  <SOption label="Option 2" value="2" />
-</SSelect>
+<SSelect disabled v-model="value" placeholder="Disabled" />
 ```
+
+:::
+
+::: details React
+
+```tsx
+<SSelect disabled value={value} onChange={setValue} placeholder="Disabled" />
+```
+
+:::
 
 ## Props
 
@@ -38,9 +74,8 @@ Select component for choosing from options.
 | filterable | Enable search | `boolean` | `false` |
 | size | Select size | `'large' \| 'middle' \| 'small'` | `'middle'` |
 
-## React Props Difference
+## Events
 
-| Name | Description | Type | Default |
-|------|-------------|------|---------|
-| value | Selected value | `string \| number` | - |
-| onChange | Change handler | `(value: string \| number) => void` | - |
+| Name | Description | Vue3 | Vue2 | React |
+|------|-------------|------|------|-------|
+| change | Selection change | `@change` | `@change` | `onChange` |

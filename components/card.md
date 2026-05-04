@@ -4,19 +4,35 @@ Container for grouped content.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <SCard title="Card Title">
   <div>Card content</div>
 </SCard>
 ```
 
-## Shadow
+:::
+
+::: details Vue2
 
 ```vue
-<SCard title="Always Shadow" shadow="always">Always show shadow</SCard>
-<SCard title="Hover Shadow" shadow="hover">Show shadow on hover</SCard>
-<SCard title="No Shadow" shadow="never">No shadow</SCard>
+<SCard title="Card Title">
+  <div>Card content</div>
+</SCard>
 ```
+
+:::
+
+::: details React
+
+```tsx
+<SCard title="Card Title">
+  <div>Card content</div>
+</SCard>
+```
+
+:::
 
 ## Props
 
@@ -28,7 +44,7 @@ Container for grouped content.
 
 ## Slots
 
-| Name | Description |
-|------|-------------|
-| default | Card content |
-| header | Custom header |
+| Name | Vue3 | Vue2 | React |
+|------|------|------|-------|
+| default | `#default` | `slot="default"` | children |
+| header | `#header` | `slot="header"` | header prop |

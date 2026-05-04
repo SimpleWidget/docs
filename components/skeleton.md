@@ -4,9 +4,29 @@ Loading skeleton component.
 
 ## Basic Usage
 
+::: details Vue3
+
 ```vue
 <SSkeleton :rows="5" animated />
 ```
+
+:::
+
+::: details Vue2
+
+```vue
+<SSkeleton :rows="5" animated />
+```
+
+:::
+
+::: details React
+
+```tsx
+<SSkeleton rows={5} animated />
+```
+
+:::
 
 ## Props
 
